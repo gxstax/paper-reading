@@ -1,9 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [程序员不可不读的论文](#%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E5%8F%AF%E4%B8%8D%E8%AF%BB%E7%9A%84%E8%AE%BA%E6%96%87)
+  - [分布式数据调度](#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E8%B0%83%E5%BA%A6)
+    - [Paxos算法](#paxos%E7%AE%97%E6%B3%95)
+    - [Raft算法](#raft%E7%AE%97%E6%B3%95)
+    - [逻辑钟和向量钟](#%E9%80%BB%E8%BE%91%E9%92%9F%E5%92%8C%E5%90%91%E9%87%8F%E9%92%9F)
+    - [Gossip 协议](#gossip-%E5%8D%8F%E8%AE%AE)
+    - [分布式数据库](#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93)
+  - [其他](#%E5%85%B6%E4%BB%96)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 程序员不可不读的论文
 你要不断提高你的认知，你要不断努力探索事务最本质的东西！
 
 
-
-[toc]
 
 ## 分布式数据调度
 
@@ -74,7 +87,7 @@
 
 * [Spanner: Google’s Globally-Distributed Database](http://static.googleusercontent.com/media/research.google.com/zh-CN//archive/spanner-osdi2012.pdf)
 
-  **基于 Spanner 论文的开源实现 **
+  **基于 Spanner 论文的开源实现**
 
 * [CockroachDB](https://github.com/cockroachdb/cockroach)
 
