@@ -1,6 +1,10 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+
+
+# 程序员不可不读的论文
+你要不断提高你的认知，你要不断努力探索事务最本质的东西！
+
+**目录**  *快捷链接*
 
 - [程序员不可不读的论文](#%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E5%8F%AF%E4%B8%8D%E8%AF%BB%E7%9A%84%E8%AE%BA%E6%96%87)
   - [分布式数据调度](#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E8%B0%83%E5%BA%A6)
@@ -12,11 +16,6 @@
   - [其他](#%E5%85%B6%E4%BB%96)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# 程序员不可不读的论文
-你要不断提高你的认知，你要不断努力探索事务最本质的东西！
-
-
 
 ## 分布式数据调度
 
