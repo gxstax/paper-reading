@@ -94,7 +94,11 @@
 
   
 
+## K8S
 
+### 容器设计模式
+
+* [容器设计模式](https://www.usenix.org/conference/hotcloud16/workshop-program/presentation/burns)
 
 ## 其他
 
