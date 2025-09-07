@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [引言](README.md)
 * 论文
     * 分布式事务-Paxos
         * [Bigtable: A Distributed Storage System for Structured Data](paper/distribution/transaction/Bigtable-ADistributedStorageSystemForStructuredData.md)
