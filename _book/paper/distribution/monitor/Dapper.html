@@ -1,0 +1,867 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Dapper, a Large-Scale Distributed Systems Tracing Infrastructure · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Zipin.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    论文
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    分布式事务-Paxos
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../transaction/Bigtable-ADistributedStorageSystemForStructuredData.html">
+            
+                <a href="../transaction/Bigtable-ADistributedStorageSystemForStructuredData.html">
+            
+                    
+                    Bigtable: A Distributed Storage System for Structured Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.html">
+            
+                <a href="../transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.html">
+            
+                    
+                    The Chubby lock service for loosely-coupled distributed systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../transaction/The-Google-File-System.html">
+            
+                <a href="../transaction/The-Google-File-System.html">
+            
+                    
+                    The Google File System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../transaction/MapReduce-SimplifiedDataProcessingOnLargeClusters.html">
+            
+                <a href="../transaction/MapReduce-SimplifiedDataProcessingOnLargeClusters.html">
+            
+                    
+                    MapReduce: Simplified Data Processing on Large Clusters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../transaction/PaxosMadeLive-AnEngineeringPerspective.html">
+            
+                <a href="../transaction/PaxosMadeLive-AnEngineeringPerspective.html">
+            
+                    
+                    Paxos Made Live - An Engineering Perspective
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" >
+            
+                <a target="_blank" href="https://harry.me/blog/2014/12/27/neat-algorithms-paxos/">
+            
+                    
+                    Neat Algorithms - Paxos-链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    Raft
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../raft/raft.html">
+            
+                <a href="../raft/raft.html">
+            
+                    
+                    Raft协议原始论文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" >
+            
+                <a target="_blank" href="https://www.infoq.cn/article/raft-paper">
+            
+                    
+                    Raft 一致性算法论文译文-InfoQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" >
+            
+                <span>
+            
+                    
+                    Raft算法动画演示
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" >
+            
+                <a target="_blank" href="https://thesecretlivesofdata.com/raft/">
+            
+                    
+                    Raft - The Secret Lives of Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" >
+            
+                <a target="_blank" href="https://raft.github.io/">
+            
+                    
+                    Raft Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3" >
+            
+                <a target="_blank" href="https://kanaka.github.io/raft.js/">
+            
+                    
+                    Raft Distributed Consensus Algorithm Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Gossip 一致性算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../gossip/flow-gossip.html">
+            
+                <a href="../gossip/flow-gossip.html">
+            
+                    
+                    Gossip协议原始论文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" >
+            
+                <span>
+            
+                    
+                    Gossip算法动画演示
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.2.1" >
+            
+                <a target="_blank" href="https://rrmoelker.github.io/gossip-visualization/">
+            
+                    
+                    Gossip Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../database/">
+            
+                <a href="../database/">
+            
+                    
+                    分布式存储和数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../database/Spanner_GloballyDistributedDatabase.html">
+            
+                <a href="../database/Spanner_GloballyDistributedDatabase.html">
+            
+                    
+                    Spanner: Google’s Globally-Distributed Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../database/Spanner_TrueTimeTheCAPTheorem.html">
+            
+                <a href="../database/Spanner_TrueTimeTheCAPTheorem.html">
+            
+                    
+                    Spanner, TrueTime & The CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../database/F1-TheFault-TolerantDistributed-RDBMS-SupportingGoogle’sAdBusiness.html">
+            
+                <a href="../database/F1-TheFault-TolerantDistributed-RDBMS-SupportingGoogle’sAdBusiness.html">
+            
+                    
+                    F1 - The Fault-Tolerant Distributed RDBMS Supporting Google’s Ad Business
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../database/Cassandra_A-Decentralized-Structured-Storage-System.html">
+            
+                <a href="../database/Cassandra_A-Decentralized-Structured-Storage-System.html">
+            
+                    
+                    Cassandra: A Decentralized Structured Storage System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../database/CRUSH_Controlled-Scalable-Decentralized-Placement-of-Replicated-Data.html">
+            
+                <a href="../database/CRUSH_Controlled-Scalable-Decentralized-Placement-of-Replicated-Data.html">
+            
+                    
+                    CRUSH: Controlled, Scalable, Decentralized Placement of Replicated Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../message/">
+            
+                <a href="../message/">
+            
+                    
+                    分布式消息系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../message/Kafka_a-Distributed-Messaging-System-for-Log-Processing.html">
+            
+                <a href="../message/Kafka_a-Distributed-Messaging-System-for-Log-Processing.html">
+            
+                    
+                    Kafka: a Distributed Messaging System for Log Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../message/Wormhole_Reliable-Pub-Sub-to-Support-Geo-replicated-Internet-Services.html">
+            
+                <a href="../message/Wormhole_Reliable-Pub-Sub-to-Support-Geo-replicated-Internet-Services.html">
+            
+                    
+                    Wormhole: Reliable Pub-Sub to Support Geo-replicated Internet Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../log/">
+            
+                <a href="../log/">
+            
+                    
+                    日志和数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../log/TheLog_What-every-software-engineer-should-know-about-real-time-datas-unifying-abstraction.html">
+            
+                <a href="../log/TheLog_What-every-software-engineer-should-know-about-real-time-datas-unifying-abstraction.html">
+            
+                    
+                    TheLog_What every software engineer should know about real-time data’s unifying abstraction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" >
+            
+                <a target="_blank" href="https://github.com/oldratlee/translations/blob/master/log-what-every-software-engineer-should-know-about-real-time-datas-unifying/README.md">
+            
+                    
+                    上文中译版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../log/LSM-Tree.html">
+            
+                <a href="../log/LSM-Tree.html">
+            
+                    
+                    The Log-Structured Merge-Tree (LSM-Tree)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../log/Immutability-Changes-Everything.html">
+            
+                <a href="../log/Immutability-Changes-Everything.html">
+            
+                    
+                    Immutability Changes Everything
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../log/Tango.html">
+            
+                <a href="../log/Tango.html">
+            
+                    
+                    Tango: Distributed Data Structures over a Shared Log
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    分布式监控和跟踪
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.7.1" data-path="Dapper.html">
+            
+                <a href="Dapper.html">
+            
+                    
+                    Dapper, a Large-Scale Distributed Systems Tracing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="Zipin.html">
+            
+                <a href="Zipin.html">
+            
+                    
+                    Zipkin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../data-analytics/">
+            
+                <a href="../data-analytics/">
+            
+                    
+                    数据分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="../data-analytics/The-Unified-Logging-Infrastructure-for-Data-Analytics.html">
+            
+                <a href="../data-analytics/The-Unified-Logging-Infrastructure-for-Data-Analytics.html">
+            
+                    
+                    The Unified Logging Infrastructure for Data Analytics at Twitter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="../data-analytics/Scaling-Big-Data-Mining-Infrastructure.html">
+            
+                <a href="../data-analytics/Scaling-Big-Data-Mining-Infrastructure.html">
+            
+                    
+                    Scaling Big Data Mining Infrastructure: The Twitter Experience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.3" data-path="../data-analytics/Dremel.html">
+            
+                <a href="../data-analytics/Dremel.html">
+            
+                    
+                    Dremel: Interactive Analysis of Web-Scale Datasets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.4" data-path="../data-analytics/Resilient-Distributed-Datasets.html">
+            
+                <a href="../data-analytics/Resilient-Distributed-Datasets.html">
+            
+                    
+                    Resident Distributed Datasets: a Fault-Tolerant Abstraction for In-Memory Cluster Computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../book/">
+            
+                <a href="../../../book/">
+            
+                    
+                    图书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Dapper, a Large-Scale Distributed Systems Tracing Infrastructure</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="Dapper.html">&#x8BBA;&#x6587;&#x539F;&#x4EF6;</a></p>
+<h2 id="google-&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x8DDF;&#x8E2A;&#x76D1;&#x63A7;&#x8BBA;&#x6587;&#x3002;&#x5176;&#x5F00;&#x6E90;&#x5B9E;&#x73B0;&#x6709;&#x4E09;&#x4E2A;-zipkin&#x3001;pinpoint-&#x548C;-htrace&#x3002;">Google &#x7684;&#x5206;&#x5E03;&#x5F0F;&#x8DDF;&#x8E2A;&#x76D1;&#x63A7;&#x8BBA;&#x6587;&#x3002;&#x5176;&#x5F00;&#x6E90;&#x5B9E;&#x73B0;&#x6709;&#x4E09;&#x4E2A; <a href="https://zipkin.io/" target="_blank">Zipkin</a>&#x3001;<a href="https://github.com/naver/pinpoint" target="_blank">Pinpoint</a> &#x548C; <a href="htrace.incubator.apache.org">HTrace</a>&#x3002;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 分布式监控和跟踪">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Zipin.html" class="navigation navigation-next " aria-label="Next page: Zipkin">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure","level":"1.2.7.1","depth":3,"next":{"title":"Zipkin","level":"1.2.7.2","depth":3,"path":"paper/distribution/monitor/Zipin.md","ref":"paper/distribution/monitor/Zipin.md","articles":[]},"previous":{"title":"分布式监控和跟踪","level":"1.2.7","depth":2,"path":"paper/distribution/monitor/README.md","ref":"paper/distribution/monitor/README.md","articles":[{"title":"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure","level":"1.2.7.1","depth":3,"path":"paper/distribution/monitor/Dapper.md","ref":"paper/distribution/monitor/Dapper.md","articles":[]},{"title":"Zipkin","level":"1.2.7.2","depth":3,"path":"paper/distribution/monitor/Zipin.md","ref":"paper/distribution/monitor/Zipin.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"paper/distribution/monitor/Dapper.md","mtime":"2025-09-07T11:13:33.514Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-09-07T12:13:27.305Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

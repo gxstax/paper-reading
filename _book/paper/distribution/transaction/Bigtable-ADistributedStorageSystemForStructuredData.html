@@ -1,0 +1,955 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Bigtable: A Distributed Storage System for Structured Data · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="The-Chubby-lock-service-for-loosely-coupled-distributed-systems.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    论文
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    分布式事务-Paxos
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1.1" data-path="Bigtable-ADistributedStorageSystemForStructuredData.html">
+            
+                <a href="Bigtable-ADistributedStorageSystemForStructuredData.html">
+            
+                    
+                    Bigtable: A Distributed Storage System for Structured Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="The-Chubby-lock-service-for-loosely-coupled-distributed-systems.html">
+            
+                <a href="The-Chubby-lock-service-for-loosely-coupled-distributed-systems.html">
+            
+                    
+                    The Chubby lock service for loosely-coupled distributed systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="The-Google-File-System.html">
+            
+                <a href="The-Google-File-System.html">
+            
+                    
+                    The Google File System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="MapReduce-SimplifiedDataProcessingOnLargeClusters.html">
+            
+                <a href="MapReduce-SimplifiedDataProcessingOnLargeClusters.html">
+            
+                    
+                    MapReduce: Simplified Data Processing on Large Clusters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="PaxosMadeLive-AnEngineeringPerspective.html">
+            
+                <a href="PaxosMadeLive-AnEngineeringPerspective.html">
+            
+                    
+                    Paxos Made Live - An Engineering Perspective
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" >
+            
+                <a target="_blank" href="https://harry.me/blog/2014/12/27/neat-algorithms-paxos/">
+            
+                    
+                    Neat Algorithms - Paxos-链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    Raft
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../raft/raft.html">
+            
+                <a href="../raft/raft.html">
+            
+                    
+                    Raft协议原始论文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" >
+            
+                <a target="_blank" href="https://www.infoq.cn/article/raft-paper">
+            
+                    
+                    Raft 一致性算法论文译文-InfoQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" >
+            
+                <span>
+            
+                    
+                    Raft算法动画演示
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" >
+            
+                <a target="_blank" href="https://thesecretlivesofdata.com/raft/">
+            
+                    
+                    Raft - The Secret Lives of Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" >
+            
+                <a target="_blank" href="https://raft.github.io/">
+            
+                    
+                    Raft Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3" >
+            
+                <a target="_blank" href="https://kanaka.github.io/raft.js/">
+            
+                    
+                    Raft Distributed Consensus Algorithm Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Gossip 一致性算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../gossip/flow-gossip.html">
+            
+                <a href="../gossip/flow-gossip.html">
+            
+                    
+                    Gossip协议原始论文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" >
+            
+                <span>
+            
+                    
+                    Gossip算法动画演示
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.2.1" >
+            
+                <a target="_blank" href="https://rrmoelker.github.io/gossip-visualization/">
+            
+                    
+                    Gossip Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../database/">
+            
+                <a href="../database/">
+            
+                    
+                    分布式存储和数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../database/Spanner_GloballyDistributedDatabase.html">
+            
+                <a href="../database/Spanner_GloballyDistributedDatabase.html">
+            
+                    
+                    Spanner: Google’s Globally-Distributed Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../database/Spanner_TrueTimeTheCAPTheorem.html">
+            
+                <a href="../database/Spanner_TrueTimeTheCAPTheorem.html">
+            
+                    
+                    Spanner, TrueTime & The CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../database/F1-TheFault-TolerantDistributed-RDBMS-SupportingGoogle’sAdBusiness.html">
+            
+                <a href="../database/F1-TheFault-TolerantDistributed-RDBMS-SupportingGoogle’sAdBusiness.html">
+            
+                    
+                    F1 - The Fault-Tolerant Distributed RDBMS Supporting Google’s Ad Business
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../database/Cassandra_A-Decentralized-Structured-Storage-System.html">
+            
+                <a href="../database/Cassandra_A-Decentralized-Structured-Storage-System.html">
+            
+                    
+                    Cassandra: A Decentralized Structured Storage System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../database/CRUSH_Controlled-Scalable-Decentralized-Placement-of-Replicated-Data.html">
+            
+                <a href="../database/CRUSH_Controlled-Scalable-Decentralized-Placement-of-Replicated-Data.html">
+            
+                    
+                    CRUSH: Controlled, Scalable, Decentralized Placement of Replicated Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../message/">
+            
+                <a href="../message/">
+            
+                    
+                    分布式消息系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../message/Kafka_a-Distributed-Messaging-System-for-Log-Processing.html">
+            
+                <a href="../message/Kafka_a-Distributed-Messaging-System-for-Log-Processing.html">
+            
+                    
+                    Kafka: a Distributed Messaging System for Log Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../message/Wormhole_Reliable-Pub-Sub-to-Support-Geo-replicated-Internet-Services.html">
+            
+                <a href="../message/Wormhole_Reliable-Pub-Sub-to-Support-Geo-replicated-Internet-Services.html">
+            
+                    
+                    Wormhole: Reliable Pub-Sub to Support Geo-replicated Internet Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../log/">
+            
+                <a href="../log/">
+            
+                    
+                    日志和数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../log/TheLog_What-every-software-engineer-should-know-about-real-time-datas-unifying-abstraction.html">
+            
+                <a href="../log/TheLog_What-every-software-engineer-should-know-about-real-time-datas-unifying-abstraction.html">
+            
+                    
+                    TheLog_What every software engineer should know about real-time data’s unifying abstraction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" >
+            
+                <a target="_blank" href="https://github.com/oldratlee/translations/blob/master/log-what-every-software-engineer-should-know-about-real-time-datas-unifying/README.md">
+            
+                    
+                    上文中译版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../log/LSM-Tree.html">
+            
+                <a href="../log/LSM-Tree.html">
+            
+                    
+                    The Log-Structured Merge-Tree (LSM-Tree)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../log/Immutability-Changes-Everything.html">
+            
+                <a href="../log/Immutability-Changes-Everything.html">
+            
+                    
+                    Immutability Changes Everything
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../log/Tango.html">
+            
+                <a href="../log/Tango.html">
+            
+                    
+                    Tango: Distributed Data Structures over a Shared Log
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../monitor/">
+            
+                <a href="../monitor/">
+            
+                    
+                    分布式监控和跟踪
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../monitor/Dapper.html">
+            
+                <a href="../monitor/Dapper.html">
+            
+                    
+                    Dapper, a Large-Scale Distributed Systems Tracing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="../monitor/Zipin.html">
+            
+                <a href="../monitor/Zipin.html">
+            
+                    
+                    Zipkin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../data-analytics/">
+            
+                <a href="../data-analytics/">
+            
+                    
+                    数据分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="../data-analytics/The-Unified-Logging-Infrastructure-for-Data-Analytics.html">
+            
+                <a href="../data-analytics/The-Unified-Logging-Infrastructure-for-Data-Analytics.html">
+            
+                    
+                    The Unified Logging Infrastructure for Data Analytics at Twitter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="../data-analytics/Scaling-Big-Data-Mining-Infrastructure.html">
+            
+                <a href="../data-analytics/Scaling-Big-Data-Mining-Infrastructure.html">
+            
+                    
+                    Scaling Big Data Mining Infrastructure: The Twitter Experience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.3" data-path="../data-analytics/Dremel.html">
+            
+                <a href="../data-analytics/Dremel.html">
+            
+                    
+                    Dremel: Interactive Analysis of Web-Scale Datasets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.4" data-path="../data-analytics/Resilient-Distributed-Datasets.html">
+            
+                <a href="../data-analytics/Resilient-Distributed-Datasets.html">
+            
+                    
+                    Resident Distributed Datasets: a Fault-Tolerant Abstraction for In-Memory Cluster Computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../book/">
+            
+                <a href="../../../book/">
+            
+                    
+                    图书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Bigtable: A Distributed Storage System for Structured Data</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="bigtable-osdi06.pdf">&#x8BBA;&#x6587;-&#x539F;&#x4EF6;</a></p>
+<p></p><h1 align="center" id="bigtable-&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;">Bigtable: &#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;</h1><p></p>
+<div align="center">Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach
+Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber
+{fay,jeff,sanjay,wilsonh,kerr,m3b,tushar,fikes,gruber}[@google.com](https://www.google.com)
+Google, Inc.</div>
+
+
+<h2 id="&#x6458;&#x8981;">&#x6458;&#x8981;</h2>
+<p>Bigtable &#x662F;&#x4E00;&#x4E2A;&#x65E8;&#x5728;&#x6269;&#x5C55;&#x5230;&#x5927;&#x89C4;&#x6A21;&#x7684;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF1A;&#x6A2A;&#x8DE8;&#x6570;&#x5343;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x7684;PB&#x7EA7;&#x522B;&#x7684;&#x6570;&#x636E;&#x91CF;&#x3002;&#x5728;&#x8C37;&#x6B4C;&#xFF0C;&#x5F88;&#x591A;&#x9879;&#x76EE;&#x90FD;&#x628A;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x4E86;Bigtable&#x4E2D;&#xFF0C;&#x5305;&#x62EC;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#xFF08;web indexing&#xFF09;&#xFF0C;&#x8C37;&#x6B4C;&#x5730;&#x7403;&#xFF08;Google Earth&#xFF09;&#xFF0C;&#x8C37;&#x6B4C;&#x8D22;&#x7ECF;&#xFF08;Google Finance&#xFF09;&#x3002;&#x8FD9;&#x4E9B;&#x4E0D;&#x540C;&#x7684;&#x5E94;&#x7528;&#x90FD;&#x5BF9;Bigtable&#x6709;&#x7740;&#x4E0D;&#x540C;&#x7684;&#x573A;&#x666F;&#x8981;&#x6C42;&#xFF0C;&#x65E2;&#x4F53;&#x73B0;&#x5728;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x65B9;&#x9762;&#xFF08;&#x4ECE;&#x7F51;&#x5740;&#x5230;&#x7F51;&#x9875;&#x518D;&#x5230;&#x536B;&#x661F;&#x56FE;&#x50CF;&#xFF09;&#xFF0C;&#x4E5F;&#x4F53;&#x73B0;&#x5728;&#x5EF6;&#x8FDF;&#x6027;&#x8981;&#x6C42;&#x65B9;&#x9762;&#xFF08;&#x4ECE;&#x540E;&#x7AEF;&#x6279;&#x5904;&#x7406;&#x5230;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x670D;&#x52A1;&#xFF09;&#x3002;&#x4E0D;&#x7BA1;&#x518D;&#x600E;&#x4E48;&#x591A;&#x6837;&#x5316;&#x7684;&#x9700;&#x6C42;&#xFF0C;Bigtable&#x90FD;&#x6210;&#x529F;&#x7684;&#x5BF9;&#x6240;&#x6709;&#x7684;&#x8C37;&#x6B4C;&#x4EA7;&#x54C1;&#x63D0;&#x4F9B;&#x4E86;&#x7075;&#x6D3B;&#x3001;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x5728;&#x8FD9;&#x7BC7;&#x8BBA;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53D9;&#x8FF0;&#x4E86;Bigtable&#x63D0;&#x4F9B;&#x7684;&#x7B80;&#x5355;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x5B83;&#x662F;&#x600E;&#x6837;&#x8BA9;&#x5BA2;&#x6237;&#x7AEF;&#x52A8;&#x6001;&#x7684;&#x63A7;&#x5236;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x548C;&#x683C;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;Bigtable&#x7684;&#x8BBE;&#x8BA1;&#x4E0E;&#x5B9E;&#x73B0;&#x3002;</p>
+<h3 id="1-&#x5F15;&#x8A00;">1. &#x5F15;&#x8A00;</h3>
+<p>&#x5728;&#x8FC7;&#x53BB;&#x7684;&#x4E24;&#x5E74;&#x534A;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8BBE;&#x8BA1;&#x3001;&#x5B9E;&#x73B0;&#x5E76;&#x90E8;&#x7F72;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; Bigtable &#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF0C;&#x7528;&#x4E8E;&#x5728; Google &#x7BA1;&#x7406;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x3002;Bigtable &#x65E8;&#x5728;&#x53EF;&#x9760;&#x5730;&#x6269;&#x5C55;&#x81F3; PB &#x7EA7;&#x6570;&#x636E;&#x548C;&#x6570;&#x5343;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x3002;Bigtable &#x5B9E;&#x73B0;&#x4E86;&#x591A;&#x4E2A;&#x76EE;&#x6807;&#xFF1A;&#x5E7F;&#x6CDB;&#x7684;&#x9002;&#x7528;&#x6027;&#x3001;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x3001;&#x9AD8;&#x6027;&#x80FD;&#x4EE5;&#x53CA;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#x3002;&#x76EE;&#x524D;&#xFF0C;&#x8D85;&#x8FC7;&#x516D;&#x5341;&#x4E2A; Google &#x4EA7;&#x54C1;&#x548C;&#x9879;&#x76EE;&#x4F7F;&#x7528; Bigtable&#xFF0C;&#x5305;&#x62EC; Google Analytics&#xFF08;&#x8C37;&#x6B4C;&#x5206;&#x6790;&#xFF09;&#x3001;Google Finance&#xFF08;&#x8C37;&#x6B4C;&#x8D22;&#x7ECF;&#xFF09;&#x3001;Orkut&#x3001;&#x4E2A;&#x6027;&#x5316;&#x641C;&#x7D22;&#xFF08;Personalized Search&#xFF09;&#x3001;Writely&#xFF08;&#x5373;&#x540E;&#x6765;&#x7684; Google Docs&#xFF09;&#x4EE5;&#x53CA; Google Earth&#xFF08;&#x8C37;&#x6B4C;&#x5730;&#x7403;&#xFF09;&#x3002;&#x8FD9;&#x4E9B;&#x4EA7;&#x54C1;&#x5C06; Bigtable &#x7528;&#x4E8E;&#x5404;&#x79CD;&#x9AD8;&#x8981;&#x6C42;&#x7684;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#xFF0C;&#x8303;&#x56F4;&#x4ECE;&#x9762;&#x5411;&#x541E;&#x5410;&#x91CF;&#x7684;&#x6279;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#xFF0C;&#x5230;&#x5BF9;&#x5EF6;&#x8FDF;&#x654F;&#x611F;&#x7684;&#x3001;&#x9762;&#x5411;&#x6700;&#x7EC8;&#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x670D;&#x52A1;&#x3002;&#x8FD9;&#x4E9B;&#x4EA7;&#x54C1;&#x6240;&#x4F7F;&#x7528;&#x7684; Bigtable &#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x5DEE;&#x5F02;&#x5F88;&#x5927;&#xFF0C;&#x4ECE;&#x51E0;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x5230;&#x6570;&#x5343;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x7B49;&#xFF0C;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x91CF;&#x6700;&#x591A;&#x53EF;&#x8FBE;&#x6570;&#x767E; TB&#x3002;</p>
+<p>&#x5728;&#x8BB8;&#x591A;&#x65B9;&#x9762;&#xFF0C;Bigtable &#x4E0E;&#x4F20;&#x7EDF;&#x6570;&#x636E;&#x5E93;&#x76F8;&#x4F3C;&#xFF1A;&#x5B83;&#x4E0E;&#x8BB8;&#x591A;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x5171;&#x4EAB;&#x4E86;&#x4E0D;&#x5C11;&#x5B9E;&#x73B0;&#x7B56;&#x7565;&#x3002;&#x5E76;&#x884C;&#x6570;&#x636E;&#x5E93; [14] &#x548C;&#x5185;&#x5B58;&#x6570;&#x636E;&#x5E93; [13] &#x4E5F;&#x5B9E;&#x73B0;&#x4E86;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x548C;&#x9AD8;&#x6027;&#x80FD;&#xFF0C;&#x4F46; Bigtable &#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x4E0E;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x4E0D;&#x540C;&#x3002;Bigtable &#x5E76;&#x4E0D;&#x652F;&#x6301;&#x5B8C;&#x6574;&#x7684;&#x5173;&#x4FC2;&#x578B;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF1B;&#x76F8;&#x53CD;&#xFF0C;&#x5B83;&#x4E3A;&#x5BA2;&#x6237;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x8BE5;&#x6A21;&#x578B;&#x652F;&#x6301;&#x5BF9;&#x6570;&#x636E;&#x5E03;&#x5C40;&#x548C;&#x683C;&#x5F0F;&#x7684;&#x52A8;&#x6001;&#x63A7;&#x5236;&#xFF0C;&#x5E76;&#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x6839;&#x636E;&#x5E95;&#x5C42;&#x5B58;&#x50A8;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5C40;&#x90E8;&#x6027;&#x7279;&#x6027;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x8BBE;&#x8BA1;&#x3002;</p>
+<p>&#x6570;&#x636E;&#x901A;&#x8FC7;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x884C;&#x540D;&#x548C;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x3002;Bigtable &#x5C06;&#x6570;&#x636E;&#x89C6;&#x4E3A;&#x672A;&#x89E3;&#x91CA;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF08;uninterpreted strings&#xFF09;&#xFF0C;&#x5C3D;&#x7BA1;&#x5BA2;&#x6237;&#x901A;&#x5E38;&#x4F1A;&#x5C06;&#x5404;&#x79CD;&#x7ED3;&#x6784;&#x5316;&#x6216;&#x534A;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5BA2;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x6A21;&#x5F0F;&#xFF08;schema&#xFF09;&#x8BBE;&#x8BA1;&#x4E0A;&#x7684;&#x7CBE;&#x5FC3;&#x9009;&#x62E9;&#xFF0C;&#x6765;&#x63A7;&#x5236;&#x5176;&#x6570;&#x636E;&#x7684;&#x5C40;&#x90E8;&#x6027;&#x3002;&#x6700;&#x540E;&#xFF0C;Bigtable &#x7684;&#x6A21;&#x5F0F;&#x53C2;&#x6570;&#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x52A8;&#x6001;&#x63A7;&#x5236;&#x6570;&#x636E;&#x662F;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF0C;&#x8FD8;&#x662F;&#x4ECE;&#x78C1;&#x76D8;&#x8BFB;&#x53D6;&#x3002;</p>
+<p>&#x7B2C; 2 &#x8282; &#x66F4;&#x8BE6;&#x7EC6;&#x5730;&#x63CF;&#x8FF0;&#x4E86; Bigtable &#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x7B2C; 3 &#x8282; &#x6982;&#x8FF0;&#x4E86;&#x5BA2;&#x6237;&#x7AEF; API&#x3002;&#x7B2C; 4 &#x8282; &#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E86; Bigtable &#x6240;&#x4F9D;&#x8D56;&#x7684;&#x5E95;&#x5C42; Google &#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x3002;&#x7B2C; 5 &#x8282; &#x63CF;&#x8FF0;&#x4E86; Bigtable &#x5B9E;&#x73B0;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;&#xFF0C;&#x7B2C; 6 &#x8282; &#x4ECB;&#x7ECD;&#x4E86;&#x4E00;&#x4E9B;&#x6211;&#x4EEC;&#x4E3A;&#x63D0;&#x5347; Bigtable &#x6027;&#x80FD;&#x6240;&#x505A;&#x7684;&#x4F18;&#x5316;&#x6539;&#x8FDB;&#x3002;&#x7B2C; 7 &#x8282; &#x63D0;&#x4F9B;&#x4E86; Bigtable &#x6027;&#x80FD;&#x7684;&#x5B9E;&#x6D4B;&#x6570;&#x636E;&#x3002;&#x6211;&#x4EEC;&#x5728; &#x7B2C; 8 &#x8282; &#x7ED9;&#x51FA;&#x4E86; Bigtable &#x5728; Google &#x5185;&#x90E8;&#x4F7F;&#x7528;&#x7684;&#x82E5;&#x5E72;&#x5B9E;&#x4F8B;&#xFF0C;&#x7B2C; 9 &#x8282; &#x8BA8;&#x8BBA;&#x4E86;&#x6211;&#x4EEC;&#x5728;&#x8BBE;&#x8BA1;&#x548C;&#x7EF4;&#x62A4; Bigtable &#x8FC7;&#x7A0B;&#x4E2D;&#x6240;&#x83B7;&#x5F97;&#x7684;&#x7ECF;&#x9A8C;&#x6559;&#x8BAD;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x7B2C; 10 &#x8282; &#x63CF;&#x8FF0;&#x4E86;&#x76F8;&#x5173;&#x5DE5;&#x4F5C;&#xFF0C;&#x7B2C; 11 &#x8282; &#x7ED9;&#x51FA;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x7ED3;&#x8BBA;&#x3002;</p>
+<h3 id="2-&#x6570;&#x636E;&#x6A21;&#x578B;">2. &#x6570;&#x636E;&#x6A21;&#x578B;</h3>
+<p>Bigtable &#x662F;&#x4E00;&#x4E2A;&#x7A00;&#x758F;&#x7684;&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x3001;&#x6301;&#x4E45;&#x5316;&#x7684;&#x591A;&#x7EF4;&#x6709;&#x5E8F;&#x6620;&#x5C04;&#x3002;&#x8BE5;&#x6620;&#x5C04;&#x901A;&#x8FC7;&#x884C;&#x952E;&#xFF08;row key&#xFF09;&#x3001;&#x5217;&#x952E;&#xFF08;column key&#xFF09;&#x548C;&#x65F6;&#x95F4;&#x6233;&#xFF08;timestamp&#xFF09;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#xFF1B;&#x6620;&#x5C04;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x503C;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x672A;&#x89E3;&#x91CA;&#x7684;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;</p>
+<h3 id="3-api">3. API</h3>
+<h3 id="4-&#x6A21;&#x5757;&#x6784;&#x5EFA;">4. &#x6A21;&#x5757;&#x6784;&#x5EFA;</h3>
+<h3 id="5-&#x5B9E;&#x73B0;">5. &#x5B9E;&#x73B0;</h3>
+<h3 id="6-&#x4F18;&#x5316;">6. &#x4F18;&#x5316;</h3>
+<h3 id="7-&#x6027;&#x80FD;&#x8BC4;&#x4F30;">7. &#x6027;&#x80FD;&#x8BC4;&#x4F30;</h3>
+<h3 id="8-&#x771F;&#x5B9E;&#x5E94;&#x7528;">8. &#x771F;&#x5B9E;&#x5E94;&#x7528;</h3>
+<h3 id="9-&#x7ECF;&#x9A8C;&#x6559;&#x8BAD;">9. &#x7ECF;&#x9A8C;&#x6559;&#x8BAD;</h3>
+<h3 id="10-&#x76F8;&#x5173;&#x5DE5;&#x4F5C;">10. &#x76F8;&#x5173;&#x5DE5;&#x4F5C;</h3>
+<h3 id="11-&#x7ED3;&#x8BBA;">11. &#x7ED3;&#x8BBA;</h3>
+<hr>
+<h3 id="&#x53C2;&#x8003;&#x6587;&#x732E;">&#x53C2;&#x8003;&#x6587;&#x732E;</h3>
+<p>[<a id="references1">1</a>] ABADI, D. J., MADDEN, S. R., AND FERREIRA,
+M. C. Integrating compression and execution in columnoriented database systems. Proc. of SIGMOD (2006).</p>
+<p>[<a id="references2">2</a>] AILAMAKI, A., DEWITT, D. J., HILL, M. D., AND SKOUNAKIS, M. Weaving relations for cache performance.In The VLDB Journal (2001), pp. 169&#x2013;180.</p>
+<p>[<a id="references3">3</a>] BANGA, G., DRUSCHEL, P., AND MOGUL, J. C. Resource containers: A new facility for resource management in server systems. In Proc. of the 3rd OSDI (Feb.
+1999), pp. 45&#x2013;58.</p>
+<p>[<a id="references4">4</a>] BARU, C. K., FECTEAU, G., GOYAL, A., HSIAO,
+H., JHINGRAN, A., PADMANABHAN, S., COPELAND,G. P., AND WILSON, W. G. DB2 parallel edition. IBM
+Systems Journal 34, 2 (1995), 292&#x2013;322.</p>
+<p>[<a id="references5">5</a>] BAVIER, A., BOWMAN, M., CHUN, B., CULLER, D.,
+KARLIN, S., PETERSON, L., ROSCOE, T., SPALINK, T.,AND WAWRZONIAK, M. Operating system support for
+planetary-scale network services. In Proc. of the 1st NSDI(Mar. 2004), pp. 253&#x2013;266.</p>
+<p>[6] BENTLEY, J. L., AND MCILROY, M. D. Data compression using long common strings. In Data Compression Conference (1999), pp. 287&#x2013;295.</p>
+<p>[7] BLOOM, B. H. Space/time trade-offs in hash coding with allowable errors. CACM 13, 7 (1970), 422&#x2013;426.</p>
+<p>[8] BURROWS, M. The Chubby lock service for looselycoupled distributed systems. In Proc. of the 7th OSDI(Nov. 2006).</p>
+<p>[9] CHANDRA, T., GRIESEMER, R., AND REDSTONE, J.Paxos made live &#x2014; An engineering perspective. In Proc.of PODC (2007).</p>
+<p>[10] COMER, D. Ubiquitous B-tree. Computing Surveys 11, 2(June 1979), 121&#x2013;137.</p>
+<p>[11] COPELAND, G. P., ALEXANDER, W., BOUGHTER,E. E., AND KELLER, T. W. Data placement in Bubba. In Proc. of SIGMOD (1988), pp. 99&#x2013;108.</p>
+<p>[12] DEAN, J., AND GHEMAWAT, S. MapReduce: Simplified data processing on large clusters. In Proc. of the 6th OSDI(Dec. 2004), pp. 137&#x2013;150.</p>
+<p>[13] DEWITT, D., KATZ, R., OLKEN, F., SHAPIRO, L.,
+STONEBRAKER, M., AND WOOD, D. Implementation
+techniques for main memory database systems. In Proc.
+of SIGMOD (June 1984), pp. 1&#x2013;8.</p>
+<p>[14] DEWITT, D. J., AND GRAY, J. Parallel database systems: The future of high performance database systems.
+CACM 35, 6 (June 1992), 85&#x2013;98.</p>
+<p>[15] FRENCH, C. D. One size fits all database architectures
+do not work for DSS. In Proc. of SIGMOD (May 1995),
+pp. 449&#x2013;450.</p>
+<p>[16] GAWLICK, D., AND KINKADE, D. Varieties of concurrency control in IMS/VS fast path. Database Engineering
+Bulletin 8, 2 (1985), 3&#x2013;10.</p>
+<p>[17] GHEMAWAT, S., GOBIOFF, H., AND LEUNG, S.-T. The
+Google file system. In Proc. of the 19th ACM SOSP (Dec.
+2003), pp. 29&#x2013;43.</p>
+<p>[18] GRAY, J. Notes on database operating systems. In Operating Systems &#x2014; An Advanced Course, vol. 60 of Lecture
+Notes in Computer Science. Springer-Verlag, 1978.</p>
+<p>[19] GREER, R. Daytona and the fourth-generation language
+Cymbal. In Proc. of SIGMOD (1999), pp. 525&#x2013;526.</p>
+<p>[20] HAGMANN, R. Reimplementing the Cedar file system
+using logging and group commit. In Proc. of the 11th
+SOSP (Dec. 1987), pp. 155&#x2013;162.</p>
+<p>[21] HARTMAN, J. H., AND OUSTERHOUT, J. K. The Zebra
+striped network file system. In Proc. of the 14th SOSP
+(Asheville, NC, 1993), pp. 29&#x2013;43.</p>
+<p>[22] KX.COM. kx.com/products/database.php. Product page.</p>
+<p>[23] LAMPORT, L. The part-time parliament. ACM TOCS 16,
+2 (1998), 133&#x2013;169.</p>
+<p>[24] MACCORMICK, J., MURPHY, N., NAJORK, M.,
+THEKKATH, C. A., AND ZHOU, L. Boxwood: Abstractions as the foundation for storage infrastructure. In Proc.
+of the 6th OSDI (Dec. 2004), pp. 105&#x2013;120.</p>
+<p>[25] MCCARTHY, J. Recursive functions of symbolic expressions and their computation by machine. CACM 3, 4 (Apr.
+1960), 184&#x2013;195.</p>
+<p>[26] O&#x2019;NEIL, P., CHENG, E., GAWLICK, D., AND O&#x2019;NEIL,
+E. The log-structured merge-tree (LSM-tree). Acta Inf.
+33, 4 (1996), 351&#x2013;385.</p>
+<p>[27] ORACLE.COM. www.oracle.com/technology/products/-database/clustering/index.html. Product page.</p>
+<p>[28] PIKE, R., DORWARD, S., GRIESEMER, R., AND QUINLAN, S. Interpreting the data: Parallel analysis with Sawzall. Scientific Programming Journal 13, 4 (2005),227&#x2013;298.</p>
+<p>[29] RATNASAMY, S., FRANCIS, P., HANDLEY, M., KARP,R., AND SHENKER, S. A scalable content-addressable network. In Proc. of SIGCOMM (Aug. 2001), pp. 161&#x2013;172.</p>
+<p>[30] ROWSTRON, A., AND DRUSCHEL, P. Pastry: Scalable, distributed object location and routing for largescale peer-to-peer systems. In Proc. of Middleware 2001(Nov. 2001), pp. 329&#x2013;350.</p>
+<p>[31] SENSAGE.COM. sensage.com/products-sensage.htm.Product page.</p>
+<p>[32] STOICA, I., MORRIS, R., KARGER, D., KAASHOEK,M. F., AND BALAKRISHNAN, H. Chord: A scalable
+peer-to-peer lookup service for Internet applications. In Proc. of SIGCOMM (Aug. 2001), pp. 149&#x2013;160.</p>
+<p>[33] STONEBRAKER, M. The case for shared nothing.Database Engineering Bulletin 9, 1 (Mar. 1986), 4&#x2013;9.</p>
+<p>[34] STONEBRAKER, M., ABADI, D. J., BATKIN, A., CHEN,X., CHERNIACK, M., FERREIRA, M., LAU, E., LIN,
+A., MADDEN, S., O&#x2019;NEIL, E., O&#x2019;NEIL, P., RASIN,A., TRAN, N., AND ZDONIK, S. C-Store: A columnoriented DBMS. In Proc. of VLDB (Aug. 2005), pp. 553&#x2013;564.</p>
+<p>[35] STONEBRAKER, M., AOKI, P. M., DEVINE, R.,LITWIN, W., AND OLSON, M. A. Mariposa: A new architecture for distributed data. In Proc. of the Tenth ICDE(1994), IEEE Computer Society, pp. 54&#x2013;65.</p>
+<p>[36] SYBASE.COM. www.sybase.com/products/databaseservers/sybaseiq. Product page.</p>
+<p>[37] ZHAO, B. Y., KUBIATOWICZ, J., AND JOSEPH, A. D.Tapestry: An infrastructure for fault-tolerant wide-area location and routing. Tech. Rep. UCB/CSD-01-1141, CS Division, UC Berkeley, Apr. 2001.</p>
+<p>[38] ZUKOWSKI, M., BONCZ, P. A., NES, N., AND HEMAN,S. MonetDB/X100 &#x2014; A DBMS in the CPU cache. IEEE
+Data Eng. Bull. 28, 2 (2005), 17&#x2013;22.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="The-Chubby-lock-service-for-loosely-coupled-distributed-systems.html" class="navigation navigation-next navigation-unique" aria-label="Next page: The Chubby lock service for loosely-coupled distributed systems">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Bigtable: A Distributed Storage System for Structured Data","level":"1.2.1.1","depth":3,"next":{"title":"The Chubby lock service for loosely-coupled distributed systems","level":"1.2.1.2","depth":3,"path":"paper/distribution/transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.md","ref":"paper/distribution/transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.md","articles":[]},"previous":{"title":"分布式事务-Paxos","level":"1.2.1","depth":2,"ref":"","articles":[{"title":"Bigtable: A Distributed Storage System for Structured Data","level":"1.2.1.1","depth":3,"path":"paper/distribution/transaction/Bigtable-ADistributedStorageSystemForStructuredData.md","ref":"paper/distribution/transaction/Bigtable-ADistributedStorageSystemForStructuredData.md","articles":[]},{"title":"The Chubby lock service for loosely-coupled distributed systems","level":"1.2.1.2","depth":3,"path":"paper/distribution/transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.md","ref":"paper/distribution/transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.md","articles":[]},{"title":"The Google File System","level":"1.2.1.3","depth":3,"path":"paper/distribution/transaction/The-Google-File-System.md","ref":"paper/distribution/transaction/The-Google-File-System.md","articles":[]},{"title":"MapReduce: Simplified Data Processing on Large Clusters","level":"1.2.1.4","depth":3,"path":"paper/distribution/transaction/MapReduce-SimplifiedDataProcessingOnLargeClusters.md","ref":"paper/distribution/transaction/MapReduce-SimplifiedDataProcessingOnLargeClusters.md","articles":[]},{"title":"Paxos Made Live - An Engineering Perspective","level":"1.2.1.5","depth":3,"path":"paper/distribution/transaction/PaxosMadeLive-AnEngineeringPerspective.md","ref":"paper/distribution/transaction/PaxosMadeLive-AnEngineeringPerspective.md","articles":[]},{"title":"Neat Algorithms - Paxos-链接","level":"1.2.1.6","depth":3,"url":"https://harry.me/blog/2014/12/27/neat-algorithms-paxos/","ref":"https://harry.me/blog/2014/12/27/neat-algorithms-paxos/","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"paper/distribution/transaction/Bigtable-ADistributedStorageSystemForStructuredData.md","mtime":"2025-09-07T12:02:39.069Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-09-07T12:13:27.305Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
