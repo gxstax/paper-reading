@@ -6,8 +6,8 @@
 
 **目录**  *快捷链接*
 
-* [论文](paper/README.md)
-    * [分布式事务-Paxos](paper/transaction/README.md)
+* [论文](paper/)
+    * [分布式事务-Paxos](paper/transaction/)
         * [Bigtable: A Distributed Storage System for Structured Data](paper/transaction/Bigtable-ADistributedStorageSystemForStructuredData.md)
         * [The Chubby lock service for loosely-coupled distributed systems](paper/transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.md)
         * [The Google File System](paper/transaction/The-Google-File-System.md)
