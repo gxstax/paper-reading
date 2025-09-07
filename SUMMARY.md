@@ -1,22 +1,22 @@
 # Summary
 
 * [引言](README.md)
-* 论文
-    * 分布式事务-Paxos
+* [论文](paper/README.md)
+    * [分布式事务-Paxos](paper/distribution/transaction/README.md)
         * [Bigtable: A Distributed Storage System for Structured Data](paper/distribution/transaction/Bigtable-ADistributedStorageSystemForStructuredData.md)
         * [The Chubby lock service for loosely-coupled distributed systems](paper/distribution/transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.md)
         * [The Google File System](paper/distribution/transaction/The-Google-File-System.md)
         * [MapReduce: Simplified Data Processing on Large Clusters](paper/distribution/transaction/MapReduce-SimplifiedDataProcessingOnLargeClusters.md)
         * [Paxos Made Live - An Engineering Perspective](paper/distribution/transaction/PaxosMadeLive-AnEngineeringPerspective.md)
-        * [Neat Algorithms - Paxos-链接](https://harry.me/blog/2014/12/27/neat-algorithms-paxos/)
-    * Raft
+        * [Neat Algorithms - Paxos](paper/distribution/transaction/NeatAlgorithms-Paxos.md)
+    * [Raft](paper/distribution/raft/README.md)
         * [Raft协议原始论文](paper/distribution/raft/raft.md)
         * [Raft 一致性算法论文译文-InfoQ](https://www.infoq.cn/article/raft-paper)
         * Raft算法动画演示
             * [Raft - The Secret Lives of Data](https://thesecretlivesofdata.com/raft/)
             * [Raft Consensus Algorithm](https://raft.github.io/)
             * [Raft Distributed Consensus Algorithm Visualization](https://kanaka.github.io/raft.js/)
-    * Gossip 一致性算法
+    * [Gossip 一致性算法](paper/distribution/gossip/README.md)
         * [Gossip协议原始论文](paper/distribution/gossip/flow-gossip.md)
         * Gossip算法动画演示
             * [Gossip Visualization](https://rrmoelker.github.io/gossip-visualization/)

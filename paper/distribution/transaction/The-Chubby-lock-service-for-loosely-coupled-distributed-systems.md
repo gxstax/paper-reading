@@ -1,4 +1,4 @@
-[论文原件](chubby-osdi06.pdf)
+[论文-原件](chubby-osdi06.pdf)
 ---
 
 <h1 align="center">Chubby：面向松耦合分布式系统的锁服务</h1>
