@@ -6,14 +6,14 @@
 
 **目录**  *快捷链接*
 
-- [程序员不可不读的论文](#%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E5%8F%AF%E4%B8%8D%E8%AF%BB%E7%9A%84%E8%AE%BA%E6%96%87)
-  - [分布式数据调度](#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E8%B0%83%E5%BA%A6)
-    - [Paxos算法](#paxos%E7%AE%97%E6%B3%95)
-    - [Raft算法](#raft%E7%AE%97%E6%B3%95)
-    - [逻辑钟和向量钟](#%E9%80%BB%E8%BE%91%E9%92%9F%E5%92%8C%E5%90%91%E9%87%8F%E9%92%9F)
-    - [Gossip 协议](#gossip-%E5%8D%8F%E8%AE%AE)
-    - [分布式数据库](#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93)
-  - [其他](#%E5%85%B6%E4%BB%96)
+* [论文](paper/README.md)
+    * [分布式事务-Paxos](paper/transaction/README.md)
+        * [Bigtable: A Distributed Storage System for Structured Data](paper/transaction/Bigtable-ADistributedStorageSystemForStructuredData.md)
+        * [The Chubby lock service for loosely-coupled distributed systems](paper/transaction/The-Chubby-lock-service-for-loosely-coupled-distributed-systems.md)
+        * [The Google File System](paper/transaction/The-Google-File-System.md)
+        * [MapReduce: Simplified Data Processing on Large Clusters](paper/transaction/MapReduce-SimplifiedDataProcessingOnLargeClusters.md)
+        * [Paxos Made Live - An Engineering Perspective](paper/transaction/PaxosMadeLive-AnEngineeringPerspective.md)
+        * [Neat Algorithms - Paxos](https://harry.me/blog/2014/12/27/neat-algorithms-paxos/)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
