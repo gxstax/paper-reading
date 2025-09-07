@@ -1,2 +1,0 @@
-# Bigtable: A Distributed Storage System for Structured Data
-

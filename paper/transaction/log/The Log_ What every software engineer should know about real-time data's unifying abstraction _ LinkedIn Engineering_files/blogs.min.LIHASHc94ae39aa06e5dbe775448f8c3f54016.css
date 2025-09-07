@@ -1,0 +1,554 @@
+/* @ Blog Styles @ */
+/* line 5, style.scss */
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* @ Header @ */
+/* line 14, style.scss */
+.main-site-navigation .liShareActions {
+  display: none;
+}
+
+/* line 18, style.scss */
+.site-logo-text {
+  font-family: "avenir-regular", helvetica, arial, sans-serif;
+}
+
+/* @ Popup @ */
+/* line 23, style.scss */
+.popup-wrapper {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+/* line 36, style.scss */
+.popup-wrapper.open {
+  visibility: visible;
+  opacity: 1;
+}
+/* line 41, style.scss */
+.popup-wrapper .popup-content {
+  background: linear-gradient(to right, #0091ca, #0e95a0);
+  box-sizing: border-box;
+  border-radius: 2px;
+  position: relative;
+  max-height: 392px;
+  width: 432px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #fff;
+}
+/* line 55, style.scss */
+.popup-wrapper .popup-content button, .popup-wrapper .popup-content a {
+  background-color: transparent;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+/* line 66, style.scss */
+.popup-wrapper .popup-content .medium-button-primary, .popup-wrapper .popup-content .medium-button-primary:hover, .popup-wrapper .popup-content .medium-button-primary:focus {
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  background-image: -webkit-linear-gradient(top, white 0%, #b3b6b9 100%);
+  border: #9b9ea2 1px solid;
+  border-radius: 2px;
+  height: 28px;
+  line-height: 0;
+  color: #44474a;
+  text-shadow: none;
+}
+/* line 78, style.scss */
+.popup-wrapper .popup-content .popup-cta {
+  margin: 32px 0;
+  text-align: center;
+}
+/* line 82, style.scss */
+.popup-wrapper .popup-content .popup-cta .medium-button-primary {
+  padding-top: 13px;
+}
+/* line 88, style.scss */
+.popup-wrapper .popup-headline {
+  font-weight: 200;
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+/* line 94, style.scss */
+.popup-wrapper .popup-subheadline {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 24px;
+}
+/* line 100, style.scss */
+.popup-wrapper .popup-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* line 105, style.scss */
+.popup-wrapper .popup-body ul {
+  list-style-position: outside;
+  padding: 0 0 0 20px;
+}
+/* line 111, style.scss */
+.popup-wrapper .inbuilt-form {
+  margin: 32px 0;
+}
+/* line 114, style.scss */
+.popup-wrapper .inbuilt-form .hidden, .popup-wrapper .inbuilt-form .disclaimer, .popup-wrapper .inbuilt-form .required-legend {
+  display: none;
+}
+/* line 118, style.scss */
+.popup-wrapper .inbuilt-form ul {
+  list-style: none;
+  display: inline;
+}
+/* line 123, style.scss */
+.popup-wrapper .inbuilt-form li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 127, style.scss */
+.popup-wrapper .inbuilt-form li.has-error {
+  display: inline;
+}
+/* line 132, style.scss */
+.popup-wrapper .inbuilt-form .form-input {
+  width: 70%;
+}
+/* line 135, style.scss */
+.popup-wrapper .inbuilt-form .form-input .form-input-label, .popup-wrapper .inbuilt-form .form-input .error {
+  display: inline-block;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+/* line 141, style.scss */
+.popup-wrapper .inbuilt-form .form-input .error {
+  font-style: italic;
+  margin-left: 5px;
+}
+/* line 146, style.scss */
+.popup-wrapper .inbuilt-form .form-input input {
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 100%;
+  height: 28px;
+  padding: 0 0 0 10px;
+  border: none;
+}
+/* line 154, style.scss */
+.popup-wrapper .inbuilt-form .form-input input:focus {
+  border: none;
+}
+/* line 158, style.scss */
+.popup-wrapper .inbuilt-form .form-input input.has-error {
+  width: 70%;
+  border: 2px solid #d11124;
+}
+/* line 165, style.scss */
+.popup-wrapper .inbuilt-form .medium-button-primary {
+  margin: -3px 0 0 3px;
+}
+/* line 170, style.scss */
+.popup-wrapper .popup-dismiss {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 0;
+}
+/* line 178, style.scss */
+.popup-wrapper .popup-close {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 0;
+  height: 28px;
+  width: 28px;
+}
+/* line 188, style.scss */
+.popup-wrapper .popup-close .icon {
+  height: 24px;
+  width: 24px;
+}
+
+/* @ Footer @ */
+/* line 197, style.scss */
+.shadow {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  background: #202020;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 208, style.scss */
+.over-shadow {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+/* @ Responsive @ */
+@media only screen and (max-width: 480px) {
+  /* line 218, style.scss */
+  .popup-wrapper .popup-content {
+    max-height: 320px;
+    width: 344px;
+    padding: 40px 20px 33px;
+    text-align: center;
+  }
+  /* line 224, style.scss */
+  .popup-wrapper .popup-content .medium-button-primary, .popup-wrapper .popup-content .medium-button-primary:hover, .popup-wrapper .popup-content .medium-button-primary:focus {
+    display: block;
+    width: 100%;
+  }
+  /* line 229, style.scss */
+  .popup-wrapper .popup-content button.medium-button-primary {
+    margin: 8px 0 0;
+  }
+  /* line 234, style.scss */
+  .popup-wrapper .popup-headline {
+    font-size: 30px;
+  }
+  /* line 238, style.scss */
+  .popup-wrapper .popup-subheadline {
+    margin: 0px;
+  }
+  /* line 242, style.scss */
+  .popup-wrapper .popup-body {
+    display: none;
+  }
+  /* line 246, style.scss */
+  .popup-wrapper .inbuilt-form {
+    margin: 26px 0;
+  }
+  /* line 249, style.scss */
+  .popup-wrapper .inbuilt-form .form-input {
+    width: 100%;
+    text-align: center;
+  }
+  /* line 253, style.scss */
+  .popup-wrapper .inbuilt-form .form-input input.has-error {
+    width: 100%;
+  }
+  /* line 257, style.scss */
+  .popup-wrapper .inbuilt-form .form-input .error {
+    display: inline;
+  }
+  /* line 263, style.scss */
+  .popup-wrapper .popup-close {
+    top: 2%;
+    right: 2%;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  /* line 271, style.scss */
+  .button-container {
+    padding: 10px 20px;
+  }
+
+  /* line 275, style.scss */
+  .button-container a.medium-button-primary {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* line 282, style.scss */
+  .site-content {
+    border: none;
+  }
+
+  /* line 288, style.scss */
+  .site-content,
+  .site-footer,
+  .linkedin-resource-list {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: auto;
+  }
+
+  /* PREMIUM HEADER */
+  /* line 295, style.scss */
+  .marketing-navigation-button {
+    display: none;
+  }
+
+  /* line 299, style.scss */
+  .site-header-control-section {
+    position: static;
+  }
+
+  /* line 303, style.scss */
+  .text-media-block .landing-feature-column .feature-text-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 308, style.scss */
+  .feature-text-content .link-block .primary-link {
+    float: none;
+  }
+
+  /* line 313, style.scss */
+  .text-media-block-top .feature-text-content,
+  .featured-resource-list .featuredResource {
+    width: auto !important;
+  }
+
+  /* line 317, style.scss */
+  .featured-resource .resource-image .image-tag {
+    height: auto;
+  }
+
+  /* line 321, style.scss */
+  .featured-resource .download-link {
+    width: 94%;
+  }
+
+  /* line 325, style.scss */
+  .featured-resource .download-link .link {
+    margin-right: 15px;
+  }
+
+  /* line 329, style.scss */
+  .hero .body {
+    width: auto !important;
+  }
+
+  /* line 333, style.scss */
+  .hero-banner-title {
+    font-size: 27px;
+  }
+
+  /* line 337, style.scss */
+  .hero-banner-title + .hero-banner-paragraph {
+    font-size: 14px;
+  }
+
+  /* line 341, style.scss */
+  .hero .horizontal-layout-60 {
+    left: 0;
+    padding: 10px;
+  }
+
+  /* line 346, style.scss */
+  .hero .vertical-layout-middle {
+    top: 10%;
+    text-align: center;
+  }
+
+  /* SUB BANNER */
+  /* line 352, style.scss */
+  .sub-banner .heading-container {
+    margin: 0 20px 30px;
+  }
+
+  /* @ Page Structure */
+  /* line 357, style.scss */
+  #content, .site-footer, .site-content {
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* line 363, style.scss */
+  .page-header .logo {
+    height: 44px;
+    line-height: 44px;
+  }
+
+  /* line 368, style.scss */
+  .page-header .title {
+    height: 39px;
+    line-height: 39px;
+  }
+
+  /* line 373, style.scss */
+  .page-header .blog-nav {
+    float: none;
+  }
+
+  /* line 377, style.scss */
+  .footer-link-list {
+    margin: 0;
+  }
+
+  /* line 381, style.scss */
+  .footer-legal-links {
+    padding: 8px 0 14px 0;
+  }
+
+  /* line 386, style.scss */
+  .site-footer #footer-site-map li,
+  .site-footer .footer-legal-links li {
+    background: #333333 url("../clientlibs/resources/img/menu-arrow.png") no-repeat right 20px top 16px;
+    border-bottom: 1px solid #2b2b2b;
+    display: block;
+    height: auto;
+    line-height: normal;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* line 397, style.scss */
+  .site-footer #footer-site-map li,
+  .site-footer .footer-legal-links li {
+    padding: 0;
+  }
+
+  /* line 402, style.scss */
+  .footer-link-list .footer-link:hover {
+    color: #666;
+    text-decoration: underline;
+  }
+
+  /* line 408, style.scss */
+  #footer-site-map li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #cdcdcd;
+  }
+  /* line 413, style.scss */
+  #footer-site-map li a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* line 421, style.scss */
+  .blog-nav li a,
+  .footer-nav-top li a,
+  .footer-link-list li a {
+    display: block;
+    font-size: 15px;
+    padding: 14px 20px;
+  }
+
+  /* line 427, style.scss */
+  .page-style {
+    border: none;
+    width: 100%;
+  }
+
+  /* line 432, style.scss */
+  .padding-wrapper {
+    padding: 40px 20px;
+  }
+
+  /* line 436, style.scss */
+  .seymour-posts {
+    font-size: 18px;
+    margin: 20px 0;
+    position: static;
+    width: auto;
+  }
+
+  /* line 443, style.scss */
+  .secondary-footer {
+    display: none;
+  }
+  /* line 445, style.scss */
+  .secondary-footer .left-column {
+    margin-left: 20px;
+  }
+  /* line 448, style.scss */
+  .secondary-footer .right-column {
+    margin-right: 20px;
+  }
+  /* line 451, style.scss */
+  .secondary-footer .link a {
+    padding: 0 15px;
+  }
+
+  /* @ Footer */
+  /* line 457, style.scss */
+  #footer .footer-div {
+    position: static;
+    width: auto;
+  }
+
+  /* line 461, style.scss */
+  #footer .footer-nav-top {
+    padding: 0;
+  }
+
+  /* line 464, style.scss */
+  .site-footer .footer-link-list li.footer-copyright {
+    background: none;
+    padding: 14px 20px;
+  }
+
+  /* line 469, style.scss */
+  .social-media-links {
+    height: 28px;
+  }
+
+  /* line 473, style.scss */
+  .social-media-links > li.follow-link {
+    display: inline-block;
+    width: auto;
+    overflow: hidden;
+    padding: 0;
+  }
+  /* line 479, style.scss */
+  .social-media-links > li.follow-link a {
+    padding: 0;
+    height: 28px;
+    width: 28px;
+  }
+
+  /* line 487, style.scss */
+  .social-icon.linkedin {
+    background-position: 0 -37px;
+  }
+  /* line 491, style.scss */
+  .social-icon.twitter {
+    background-position: -28px -37px;
+  }
+  /* line 495, style.scss */
+  .social-icon.rss {
+    background-position: -56px -37px;
+  }
+  /* line 499, style.scss */
+  .social-icon.facebook {
+    background-position: -84px -37px;
+  }
+  /* line 503, style.scss */
+  .social-icon.google {
+    background-position: -112px -37px;
+  }
+  /* line 507, style.scss */
+  .social-icon.youtube {
+    background-position: -140px -37px;
+  }
+  /* line 511, style.scss */
+  .social-icon.slideshare {
+    background-position: -168px -37px;
+  }
+  /* line 515, style.scss */
+  .social-icon.flickr {
+    background-position: -196px -37px;
+  }
+}
