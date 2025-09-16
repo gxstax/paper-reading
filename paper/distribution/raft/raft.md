@@ -66,12 +66,19 @@ Paxos的第二个问题是它并没有为实际构建提供一个良好的基础
 
 我们察觉到这种分析具有很高的主观性；尽管如此，我们使用了两种普遍使用的技巧。第一个技巧便是众所周知的问题分解法：只要可以，我们便把问题分解为多个可以独立解决、解释和理解的子问题。例如：在Raft中我们划分出了「领导者选举」，「日志复制」，「安全性」和「成员变更」。
 
-
+第二个方法是通过精简可能涉及到的状态数量来简化状态空间，从而使得系统更加有条理性，并尽可能消除不确定性。另外，日志是不允许出现空洞的，Raft限制了日志之间产生不一致的可能。尽管在大多数场景中，我们会努力消除不确定性，但存在一些情况，不确定性反而能降低对系统的理解难度。一个典型的例子，随机性的方法引入了不确定性，但如果用同样的方式来处理所有可能性的选择问题上反而会缩小状态范围（“选择任意一个；对结果没有影响”）。所以我们使用随机法来简化领导者选举算法。
 
 
 ## 5. Raft 共识算法
 
+从第二节的叙述中我们知道了Raft是管理复制日志的一个算法。
 
+
+![图2](images/raft-2.png)
+
+<a id="raft-2"><font color="#A7535A"> **图-2:**</font></a>A condensed summary of the Raft consensus algorithm (excluding membership changes and log compaction). The server
+behavior in the upper-left box is described as a set of rules that trigger independently and repeatedly. Section numbers such as §5.2
+indicate where particular features are discussed. A formal specification [31] describes the algorithm more precisely.
 
 
 ---
