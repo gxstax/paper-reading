@@ -5,8 +5,7 @@
 
 
 <h1 align="center">寻找一种易于理解的一致性算法</h1>
-<div align="center">Diego Ongaro and John Ousterhout
-Stanford University</div>
+<div align="center">Diego Ongaro and John Ousterhout Stanford University</div>
 
 ## 摘要
 Raft 是一种用于管理复制日志的共识算法。它的结果与（多实例）Paxos 等价，效率也与 Paxos 相当，但其结构与 Paxos 不同；这种差异使得 Raft 比 Paxos 更易于理解，同时也为构建实际系统提供了更好的基础。为了增强可理解性，Raft 将共识的关键要素——如领导者选举、日志复制和安全性——进行了分离，并通过强制实施更强的一致性，减少了需要考虑的状态数量。一项用户研究的结果表明，学生学习 Raft 比学习 Paxos 更容易。Raft还包含一种新的集群成员变更机制，该机制通过使用重叠多数（overlapping majorities）来保证安全性。
@@ -71,14 +70,22 @@ Paxos的第二个问题是它并没有为实际构建提供一个良好的基础
 
 ## 5. Raft 共识算法
 
-从第二节的叙述中我们知道了Raft是管理复制日志的一个算法。
+从第二节的叙述中我们知道了Raft是管理复制日志的一个算法。[图2](#raft-2)简要的概述了这个算法以供参考，[图3](#raft-3)列举了该算法的关键属性；图中涉及到的部分我们会在本节分别进行讨论。
 
+Raft通过先选举出一个特定的领导者来实现共识，然后让该领导者全权负责对复制日志的管理。领导者接收客户端发送的日志片段，
+然后将其同步复制给其它服务器，并告知服务器何时可以安全的将这些日志片段应用到它们的状态机上。
 
 ![图2](images/raft-2.png)
 
-<a id="raft-2"><font color="#A7535A"> **图-2:**</font></a>A condensed summary of the Raft consensus algorithm (excluding membership changes and log compaction). The server
-behavior in the upper-left box is described as a set of rules that trigger independently and repeatedly. Section numbers such as §5.2
-indicate where particular features are discussed. A formal specification [31] describes the algorithm more precisely.
+<a id="raft-2"><font color="#A7535A"> **图-2:**</font></a>Raft共识算法简要总结（不包括成员变更和日志压缩）。左上角方框内将服务器行为描述为一组独立和反复触发结果的集合。在诸如 §5.2 小节会对这一特性做讨论。这里[31]是一份正式规范单独对这个算法做了更精确的讨论。
+
+![图3](images/raft-3.png)
+
+<a id="raft-2"><font color="#A7535A"> **图-2:**</font></a>Raft共识算法简要总结（不包括成员变更和日志压缩）。左上角方框内将服务器行为描述为一组独立和反复触发结果的集合。在诸如 §5.2 小节会对这一特性做讨论。这里[31]是一份正式规范单独对这个算法做了更精确的讨论。
+
+
+
+
 
 
 ---
