@@ -77,7 +77,16 @@ Raft通过先选举出一个特定的领导者来实现共识，然后让该领�
 
 ![图2](images/raft-2.png)
 
-<a id="raft-2"><font color="#A7535A"> **图-2:**</font></a>Raft共识算法简要总结（不包括成员变更和日志压缩）。左上角方框内将服务器行为描述为一组独立和反复触发结果的集合。在诸如 §5.2 小节会对这一特性做讨论。这里[31]是一份正式规范单独对这个算法做了更精确的讨论。
+<a id="raft-2"><font color="#A7535A"> **图-2:**</font></a>Raft共识算法简要总结（不包括成员变更和日志压缩）。左上角方框内将服务器行为描述为一组独立和反复触发结果的集合。在诸如 §5.2 小节会对这一特性做讨论。这里[31]是一份正式规范单独对这个算法做了更精确的讨论。通过设置一个领导者角色可以简化对复制日志的管理。例如，领导者可以在不经过与其它服务器协商的情况下自行决定新条目在日志中放置的位置，并且数据流可以直接简单的从领导者到其它服务。领导者有时候可能会发生故障或者和其它服务器断联的情况，这种情况将会选举出一个新的领导者。
+
+基于领导者的要求，Raft将共识问题分解为三个相对独立的子问题，我们将会在接下来的小节中展开讨论：
+* **领导者选举（Leader election）：**当现有的领导者发生故障时，必须选举出一个新的领导者（第5.2小节）。
+* **日志复制（Log replication）：**领导者必须接受来自客户端的日志条目并且将它们同步复制给集群中的其它服务节点，强制保证其它服务节点的日志和领导者日志的一致（第5.3小节）。
+* **安全性（Safety）：**对Raft来说，安全性的关键属性是[图3](#raft-3)中的**状态机安全属性（State Machine Safety Property）**：如果任何一个服务节点应用了一个特定的日志条目到它的状态机，那么其他的的服务节点则不可以在同一日志索引上应用其他不同的命令。第5.4小节描述了Raft是怎么保证这一安全属性的解决方案；该解决方案还会涉及到对5.2小节中选举机制的额外限制。
+
+介绍完「共识算法」后，本节还会讨论可用性和时间因素在系统中的作用。
+
+### 5.1 
 
 ![图3](images/raft-3.png)
 
@@ -174,6 +183,7 @@ highly-available distributed systems. In Proc. PODC’88,ACM Symposium on Princi
 
 <a id="anchor-38">[38]</a> SHVACHKO, K., KUANG, H., RADIA, S., AND CHANSLER, R. The Hadoop distributed file system.
 In Proc. MSST’10, Symposium on Mass Storage Systems and Technologies (2010), IEEE Computer Society, pp. 1–10.
+
 <a id="anchor-39">[39]</a> VAN RENESSE, R. Paxos made moderately complex. Tech. rep., Cornell University, 2012.
 
 
